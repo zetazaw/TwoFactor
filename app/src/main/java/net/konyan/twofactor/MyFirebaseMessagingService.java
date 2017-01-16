@@ -53,8 +53,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         mBuilder.addAction(R.drawable.ic_action_name, "Yes", pendingIntentYes);
 
         Intent noReceive = new Intent();
-        yesReceive.setAction(NO_ACTION);
-        yesReceive.putExtra(Util.KEY_DATA_CODE, code);
+        noReceive.setAction(NO_ACTION);
+        noReceive.putExtra(Util.KEY_DATA_CODE, code);
         PendingIntent pendingIntentNo =
                 PendingIntent.getBroadcast(this, 12345, noReceive, PendingIntent.FLAG_CANCEL_CURRENT);
         mBuilder.addAction(R.drawable.ic_action_no, "No", pendingIntentNo);
